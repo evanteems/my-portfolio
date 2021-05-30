@@ -18,4 +18,4 @@ I used vscode, index.html, bootstrap, abd styling!
 Making a portfolio!
 
 # Questions
-If you have any questions, contact me here(#https://github.com/evanteems)
+If you have any questions, contact me here(https://github.com/evanteems)
