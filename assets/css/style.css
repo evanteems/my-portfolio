@@ -1,0 +1,241 @@
+body {
+    background: url("../images/background_pattern.jpg");
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    width: 16%;
+    text-align: center;
+    border: orange 3px solid;
+    border-top: transparent;
+}
+
+.top {
+    background-color: transparent;
+    padding: 5px 20px;
+}
+
+.h1E1 {
+    width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+    padding: 25px 25px;
+}
+
+nav a {
+    font-size: 25px;
+    color: orangered;
+    margin: 0 25px;
+}
+
+nav a:hover {
+    background-color: purple;
+}
+
+.banner {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    height: 360px;
+    background-image: url(../images/background_pattern.jpg);
+}
+
+.phrase {
+    background-color: black;
+    color: white;
+    width: 20%;
+}
+
+.grid-container {
+    width: 100%;
+    height: 720px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.4fr 0.6fr 0.6fr 1.4fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+     "ab0 ab1 ab1 ab1 ab2"
+     "ab0 ab4 ab5 ab5 ab2"
+     "ab0 ab4 ab5 ab5 ab2"
+     "ab0 ab4 ab3 ab3 ab3"
+     "ws0 ws7 ws2 ws2 ws1"
+     "ws0 ws4 ws2 ws2 ws1"
+     "ws0 ws4 ws2 ws2 ws3"
+     "ws0 ws4 ws6 ws5 ws5";
+}
+
+.ab0, .ab1, .ab2, .ab3, .ab4, .ab5 {
+    border: purple 2px dotted;
+}
+
+.ab0 {
+    grid-area: ab0;
+    background-image: url(../images/me.jpg);
+    background-size: 100%;
+    color: white;
+}
+
+.ab1 { grid-area: ab1; background-color: grey; }
+
+.ab2 { grid-area: ab2; background-color: darkgrey; }
+
+.ab3 { grid-area: ab3; background-color: silver;}
+
+.ab4 { grid-area: ab4; background-color: dimgray; }
+
+.ab5 { grid-area: ab5; background-color: slategray; }
+
+.ws0, .ws1, .ws2, .ws3, .ws4, .ws5, .ws6, .ws7 {
+    background-size: 100%;
+    color: white;
+}
+
+.ws0 {
+    grid-area: ws0;
+    background-image: url(../images/workspace.jpg);
+    background-size: 100%;
+}
+
+.ws1 {
+    grid-area: ws1;
+    background-image: url("../images/password-generator.png");
+    color: orangered;
+}
+
+.ws2 {
+    grid-area: ws2;
+    background-image: url(../images/runbuddy.png);
+    color: orangered;
+}
+
+.ws3 {
+    grid-area: ws3;
+    background-image: url(../images/multiple-choice.png);
+    color: orangered;
+}
+
+.ws1:hover { opacity: 0.7; }
+
+.ws2:hover { opacity: 0.7; }
+
+.ws3:hover { opacity: 0.7; }
+
+.contact {
+    flex-direction: row;
+    height: 100px;
+}
+
+.contact a {
+    color: slategray;
+}
+
+.co0 {
+    width: 20%;
+    background-color: slategrey;
+    color: silver;
+    margin: 0;
+    padding: 17px 0;
+}
+
+.co1 {
+    background-color: azure; padding: 30px 0;
+}
+
+.co2 {
+    background-color: darkgrey; padding: 30px 0;
+}
+
+.co3 {
+    background-color: whitesmoke; padding: 30px 0;
+}
+
+.co4 {
+    background-color: silver; padding: 30px 0;
+}
+
+.bot {
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 5px 5px;
+    height: 50px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .flex-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .grid-container {
+        width: 100%;
+        height: 3500px;
+        background-repeat: no-repeat;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas: 
+            "ab0"
+            "ab0"
+            "ab0"
+            "ab5"
+            "ab1"
+            "ab2"
+            "ab3"
+            "ab4"
+            "ws0"
+            "ws0"
+            "ws0"
+            "ws7"
+            "ws7"
+            "ws2"
+            "ws2"
+            "ws1"
+            "ws3"
+            "ws3"
+            "ws4"
+            "ws4"
+            "ws6"
+            "ws6"
+            "ws5"
+            "ws5";
+    }
+
+    .ab0 {
+        align-items: center;
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: black;
+    }
+
+    .ws0, .ws2 {
+        align-items: center;
+        background-repeat: no-repeat;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .bot {
+        flex-direction: column-reverse;
+    }
+}
